@@ -113,7 +113,7 @@ public class ImageServlet extends HttpServlet {
 		// File("https://storage.googleapis.com/laykart-165108.appspot.com/" +
 		// ImageName);
 		URL url = new URL(imgPath);
-		// Image image = ImageIO.read(url);
+		// ImageÂ imageÂ =Â ImageIO.read(url);
 
 		BufferedImage bufferedImage = ImageIO.read(url);
 
@@ -149,12 +149,15 @@ public class ImageServlet extends HttpServlet {
 				if ("leyKart-images/B1/G1.png".equals(object.getName())) {
 					byte[] imageBytes = null;
 					if ("image/png".equals(object.getContentType())) {
+						
+						System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSS");
+						System.out.println(object.getContentType());
 
 						//imageBytes = extractBytes(object.getName());
 
 						// [START original_image]
 						// Read the image.jpg resource into a ByteBuffer.
-						System.out.println("Test");
+						System.out.println(imgPath);
 						ServletContext context = getServletContext();
 						//URL resource = context.getResource("/WEB-INF/image.jpg");
 						URL resource = context.getResource(imgPath + object.getName());
